@@ -24,6 +24,14 @@ body {
     background-color: #f6eee4;
 }
 
+
+/* Style rules for image, video elements */
+
+video {
+    width: 100%;
+    height: auto;
+}
+
 img {
     max-width: 100%;
     display: block;
