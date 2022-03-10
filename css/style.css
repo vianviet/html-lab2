@@ -14,10 +14,7 @@ main,
 footer,
 img,
 h1,
-h3,
-aside,
-figcaption,
-figure {
+h3 {
     margin: 0;
     padding: 0;
     border: 0;
@@ -38,11 +35,16 @@ img {
 
 /* Style rules to show mobile class and hide tab-desk class */
 
-.mobile {
+
+/* Style rule show mobile class and hide tab-desk class */
+
+.mobile,
+.mobile-tablet {
     display: block;
 }
 
-.tab-desk {
+.tab-desk,
+.desktop {
     display: none;
 }
 
@@ -156,7 +158,8 @@ figcaption {
     margin-left: 10%;
 }
 
-#contact {
+#contact,
+#form h2 {
     text-align: center;
 }
 
@@ -172,6 +175,38 @@ figcaption {
     text-decoration: none;
     font-weight: bold;
 }
+
+
+/* Style rules for form elements */
+
+fieldset,
+input,
+textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+form #submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+
+
+/* Style rules for footer content */
 
 footer {
     text-align: center;
@@ -189,7 +224,7 @@ footer a {
 
 /* Media Query for Tablet Viewport */
 
-@media screen and (min-width:620px),
+@media screen and (min-width: 620px),
 print {
     /* Tablet Viewport: Show tab-desk class, hide mobile class */
     .tab-desk {
@@ -200,6 +235,7 @@ print {
     }
     /* Tablet Viewport: Style rules for nav area */
     nav li {
+        border-top: none;
         display: inline-block;
         font-size: 1.25em;
     }
@@ -211,48 +247,88 @@ print {
         grid-template-columns: auto auto;
         grid-gap: 10px;
     }
-    figcaption {
-        padding: 2%;
-        border-top: 4px solid #2a1f14;
-    }
     aside {
         grid-column: 1 / span 2;
+    }
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 70%;
+        margin: 0 auto;
     }
 }
 
 
-/* Media Query for Desktop Viewport. */
+/* Media Query for Desktop Viewport */
 
 @media screen and (min-width: 1000px),
 print {
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
+    .desktop {
+        display: block;
+    }
+    .mobile-tablet {
+        display: none;
+    }
     /* Desktop Viewport: Style rules for nav area */
     nav li {
         font-size: 1.5em;
-    }
-    nav li a {
         padding: 0.5em 1.5em;
     }
     nav li a:hover {
-        opacity: 0.5;
         color: #2a1f14;
         background-color: #f6eee4;
+        opacity: 0.5;
     }
     /* Desktop Viewport: Style rules for main content */
     #info ul {
         margin-left: 5%;
     }
     .grid {
-        grid-template-columns: auto auto auto;
-        grid-gap: 30px;
+        grid-template-columns: auto auto auto auto;
     }
     aside {
-        grid-column: 1 / span 3;
-        font-size: 2em;
+        grid-column: 1 / span 4;
+    }
+    /* Style rules for table */
+    table {
+        border: 1px solid #2a1f14;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+    th,
+    td {
+        border: 1px solid #2a1f14;
+        padding: 1%;
+    }
+    th {
+        background-color: #2a1f14;
+        color: #fff;
+        font-size: 1.15em;
+    }
+    tr:nth-child(odd) {
+        background-color: #deccba;
+    }
+    /* Desktop Viewport: Style rules for form elements */
+    form {
+        width: auto;
+    }
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+    .btn {
+        grid-column: 1 / span 2;
     }
 }
 
 
-/* Media Query for Large Desktop Viewports. */
+/* Media Query for Large Desktop Viewports */
 
 @media screen and (min-width: 1921px) {
     body {
@@ -265,13 +341,6 @@ print {
     main {
         background-color: #f6eee4;
     }
-    .grid {
-        grid-template-columns: auto auto auto auto;
-    }
-    aside {
-        grid-column: 1 / span 4;
-        font-size: 3em;
-    }
 }
 
 
@@ -279,7 +348,7 @@ print {
 
 @media print {
     body {
-        background-color: white;
-        color: black;
+        background-color: #fff;
+        color: #000;
     }
 }
