@@ -49,12 +49,56 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55750.646345652174!2d-82.15626018545034!3d29.15242890688428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7d33b57042815%3A0xafaea306fae227d0!2sOcala%2C%20Florida%2034471%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1646393856379!5m2!1svi!2s "
                     width="600 " height="450 " style="border:0; " allowfullscreen=" " loading="lazy "></iframe>
             </div>
+            <div id="form">
+
+                <h2>Complete the form below and we will contact you soon.</h2>
+
+                <form class="form-grid">
+                    <!-- Start Form -->
+
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="fName">First Name:</label>
+                        <input type="text" name="fName" id="fName">
+
+                        <label for="lName">Last Name:</label>
+                        <input type="text" name="lName" id="lName">
+
+                        <label for="bName">Name of Business:</label>
+                        <input type="text" name="bName" id="bName">
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        <p>I would like more information about:</p>
+
+                        <label for="vol"><input type="radio" name="info" id="vol" value="Volunteering">Volunteering</label>
+
+                        <label for="sponsor"><input type="radio" name="info" id="sponsor" value="Sponsorship Opportunities">Sponsorship Opportunities</label>
+
+                        <label for="wild"><input type="radio" name="info" id="wild" value="Wildlife">Wildlife</label>
+
+                        <label for="other"><input type="radio" name="info" id="other" value="Other">Other, please specify below.</label>
+
+                        <label for="questions">What questions do you have for us?</label>
+                        <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
+                    </fieldset>
+
+                    <input type="submit" id="submit" value="Submit" class="btn">
+
+                </form>
         </main>
         <footer>
             <p>&copy; Copyright 2021. All Rights Reserved.</p>
             <a href="mailto:contact@wildrescues.net ">contact@wildrescues.net</a>
         </footer>
-    </div>
+        </div>
 </body>
 
 </html>
