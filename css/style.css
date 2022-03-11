@@ -38,6 +38,25 @@ img {
 }
 
 
+/* Style rules for skip navigation link */
+
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    color: #fff;
+    background-color: #2a1f14;
+    text-decoration: none;
+    padding: 0.5%;
+    top: auto;
+    left: auto;
+    right: 1px;
+    z-index: 1;
+}
+
+
 /* Style rules for mobile viewport */
 
 
@@ -249,6 +268,11 @@ footer a {
     text-decoration: none;
 }
 
+.social img {
+    display: inline-block;
+    padding: 4%;
+}
+
 
 /* Media Query for Tablet Viewport */
 
@@ -293,6 +317,18 @@ print {
     form {
         width: 70%;
         margin: 0 auto;
+    }
+    /* Tablet Viewport: Style rules for footer area */
+    footer {
+        overflow: auto;
+    }
+    footer .copyright {
+        float: left;
+        width: 65%;
+    }
+    footer .social {
+        float: right;
+        width: 25%;
     }
 }
 
